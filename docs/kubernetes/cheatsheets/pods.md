@@ -1,6 +1,7 @@
 ---
 title: Pods
 layout: home
+grand_parent: Kubernetes
 parent: Kubernetes Cheat Sheets
 nav_order: 1
 last_modified_date: 2024-01-07
@@ -31,11 +32,11 @@ last_modified_date: 2024-01-07
 | List unhealthy pods in all namespaces                                                 | `kubectl get pods --field-selector=status.phase!=Running -A`                                                |
 | List running pods                                                                     | `kubectl get pods --field-selector=status.phase=Running`                                                    |
 | List running pods in all namespaces                                                   | `kubectl get pods --field-selector=status.phase=Running -A`                                                 |
-| Get Pod initContainer status                                                          | `kubectl get pod --template '{{.status.initContainerStatuses}}' <NAME>`                                     |
+| Get Pod initContainer status                                                          | `kubectl get pod --template {% raw %}'{{.status.initContainerStatuses}}'{% endraw %} <NAME>`                |
 | List a single pod in JSON output format                                               | `kubectl get -o json <NAME>`                                                                                |
 | List a pod identified by type and name specified in "pod.yaml" in JSON output format  | `kubectl get -f pod.yaml -o json`                                                                           |
 | List resources from a directory with kustomization.yaml - e.g. dir/kustomization.yaml | `kubectl get -k dir/`                                                                                       |
-| Return only the phase value of the specified pod                                      | `kubectl get -o template pod/<NAME> --template={{.status.phase}}`                                           |
+| Return only the phase value of the specified pod                                      | `kubectl get -o template pod/<NAME> {% raw %}--template={{.status.phase}} {% endraw %}`                     |
 | List resource information in custom columns                                           | `kubectl get pod NAME -o custom-columns=CONTAINER:.spec.containers[0].name,IMAGE:.spec.containers[0].image` |
 | List all replication controllers and services together in ps output format            | `kubectl get rc,services`                                                                                   |
 | List one or more resources by their type and names                                    | `kubectl get rc/<NAME> service/<NAME> pods/<NAME>`                                                          |
@@ -53,4 +54,4 @@ A Pod models an application-specific "logical host" and can contain different ap
 
 Pods are the atomic unit on the Kubernetes platform. When we create a Deployment on Kubernetes, that Deployment creates Pods with containers inside them (as opposed to creating containers directly). Each Pod is tied to the Node where it is scheduled, and remains there until termination (according to restart policy) or deletion. In case of a Node failure, identical Pods are scheduled on other available Nodes in the cluster.
 
-![Pods Overview](../../assets/images/pods.svg)
+![Pods Overview](../../../assets/images/pods.svg)

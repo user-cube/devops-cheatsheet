@@ -54,4 +54,4 @@ A Pod models an application-specific "logical host" and can contain different ap
 
 Pods are the atomic unit on the Kubernetes platform. When we create a Deployment on Kubernetes, that Deployment creates Pods with containers inside them (as opposed to creating containers directly). Each Pod is tied to the Node where it is scheduled, and remains there until termination (according to restart policy) or deletion. In case of a Node failure, identical Pods are scheduled on other available Nodes in the cluster.
 
-![Pods Overview](../../../assets/images/pods.svg)
+![Pods Overview](/assets/images/pods.svg)

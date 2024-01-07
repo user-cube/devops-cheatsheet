@@ -1,8 +1,8 @@
-title: Just the Docs Template
-description: A starter template for a Jeykll site using the Just the Docs theme!
+title: Kubernetes Cheatsheets
+description: This repository serves as a comprehensive resource for Kubernetes enthusiasts, providing a collection of cheatsheets and relevant information to help you navigate and master Kubernetes.
 theme: just-the-docs
 
-url: https://just-the-docs.github.io
+url: https://user-cube.github.io/kubernetes-cheatsheet/
 
 aux_links:
   Template Repository: https://github.com/just-the-docs/just-the-docs-template

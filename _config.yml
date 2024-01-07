@@ -10,7 +10,7 @@ enable_copy_code_button: true
 back_to_top: true
 back_to_top_text: "Back to top"
 
-logo: "assets/images/kubernetes_logo.png"
+logo: "assets/images/devops-process.png"
 
 # Add last edit information to footer
 

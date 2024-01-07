@@ -9,7 +9,7 @@ last_modified_date: 2024-01-07
 
 Welcome to the DevOps Cheatsheets Repository! This repository serves as a comprehensive resource for DevOps enthusiasts, providing a collection of cheatsheets and relevant information to help you navigate and master the DevOps role.
 
-![DevOps](assets/images/devops.jpg)
+![DevOps](https://user-cube.github.io/devops-cheatsheet/assets/images/devops.jpg)
 ## Table of Contents
 
 1. [Kubernetes](/docs/kubernetes/)

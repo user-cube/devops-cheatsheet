@@ -1,7 +1,9 @@
-# Kubernetes CheatSheets
+# Kubernetes Cheat Sheets
 
 ## Overview
 Welcome to the Kubernetes Cheatsheets Repository! This repository serves as a comprehensive resource for Kubernetes enthusiasts, providing a collection of cheatsheets and relevant information to help you navigate and master Kubernetes.
+
+![Kubernetes Logo](assets/images/kubernetes_logo.png)
 
 ## Building and previewing your site locally
 

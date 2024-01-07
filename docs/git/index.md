@@ -11,7 +11,7 @@ last_modified_date: 2024-01-07
 
 Git, the distributed version control system, is a versatile tool that empowers developers to manage their source code efficiently. While many are familiar with the basic commands, there exists a treasure trove of advanced tricks that can elevate your Git workflow to new heights. In this exploration, we'll delve into a set of Git tricks that go beyond the basics, offering insights and techniques to enhance your version control experience.
 
-![Git logo](../../assets/images/git_logo.png)
+![Git logo](/assets/images/git_logo.png)
 
 ## Interactive Rebase Magic:
 Interactive rebase is a powerful feature that allows you to rewrite commit history. It lets you squash, edit, or reorder commits before pushing them to a remote repository. Mastering interactive rebase can lead to cleaner and more organized commit histories.

@@ -1,8 +1,18 @@
-title: Kubernetes Cheatsheets
+title: Kubernetes Cheat Sheets
 description: This repository serves as a comprehensive resource for Kubernetes enthusiasts, providing a collection of cheatsheets and relevant information to help you navigate and master Kubernetes.
 theme: just-the-docs
 
 url: https://user-cube.github.io/kubernetes-cheatsheet/
 
-aux_links:
-  Template Repository: https://github.com/just-the-docs/just-the-docs-template
+search_enabled: true
+enable_copy_code_button: true
+
+back_to_top: true
+back_to_top_text: "Back to top"
+
+logo: "assets/images/kubernetes_logo.png"
+
+# Add last edit information to footer
+
+last_edit_timestamp: true # show or hide edit time - page must have `last_modified_date` defined in the frontmatter
+last_edit_time_format: "%b %e %Y" # uses ruby's time format: https://ruby-doc.org/stdlib-2.7.0/libdoc/time/rdoc/Time.html

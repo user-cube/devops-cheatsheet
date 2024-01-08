@@ -1,8 +1,8 @@
-title: Kubernetes Cheat Sheets
-description: This repository serves as a comprehensive resource for Kubernetes enthusiasts, providing a collection of cheatsheets and relevant information to help you navigate and master Kubernetes.
+title: DevOps Cheat Sheets
+description: This repository serves as a comprehensive resource for DevOps enthusiasts, providing a collection of cheatsheets and relevant information to help you navigate and master the DevOps role.
 theme: just-the-docs
 
-url: https://user-cube.github.io/kubernetes-cheatsheet/
+url: https://user-cube.github.io/devops-cheatsheet/
 
 search_enabled: true
 enable_copy_code_button: true

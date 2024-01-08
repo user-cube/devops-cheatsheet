@@ -21,6 +21,8 @@ Welcome to the DevOps Cheatsheets Repository! This repository serves as a compre
 3. [CI/CD](/docs/cicd/)
    - [GitHub Actions](/docs/cicd/actions/)
       - [Test GitHub Actions Locally](/docs/cicd/actions/test-locally)
+4. [Crontabs](/docs/crontab/)
+   - [Crontab Cheat Sheet](/docs/crontab/cheatsheets/)
 
 ## How to Use
 
@@ -29,6 +31,14 @@ Feel free to explore the cheatsheets and resources available in this repository.
 ## Contributing
 
 We encourage contributions from the community! If you have additional cheatsheets, tips, or corrections, please submit a pull request. Together, we can make this repository a valuable reference for anyone working with Kubernetes.
+
+<ul class="list-style-none">
+{% for contributor in site.github.contributors %}
+  <li class="d-inline-block mr-1">
+     <a href="{{ contributor.html_url }}"><img src="{{ contributor.avatar_url }}" width="32" height="32" alt="{{ contributor.login }}"></a>
+  </li>
+{% endfor %}
+</ul>
 
 ## Issues
 

@@ -2,7 +2,14 @@ title: DevOps Cheat Sheets
 description: This repository serves as a comprehensive resource for DevOps enthusiasts, providing a collection of cheatsheets and relevant information to help you navigate and master the DevOps role.
 theme: just-the-docs
 
+# For jekyll-github-metadata
+repository: user-cube/devops-cheatsheet
+
 url: https://user-cube.github.io/devops-cheatsheet/
+
+plugins:
+  - jekyll-github-metadata
+
 
 search_enabled: true
 enable_copy_code_button: true

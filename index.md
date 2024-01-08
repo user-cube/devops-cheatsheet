@@ -26,11 +26,11 @@ Welcome to the DevOps Cheatsheets Repository! This repository serves as a compre
 
 ## How to Use
 
-Feel free to explore the cheatsheets and resources available in this repository. Each cheatsheet is designed to provide quick and concise information to help you navigate Kubernetes effectively. Whether you are a beginner or an experienced user, you'll find valuable insights and tips.
+Feel free to explore the cheatsheets and resources available in this repository. Each cheatsheet is designed to provide quick and concise information to help you navigate the DevOps path effectively. Whether you are a beginner or an experienced user, you'll find valuable insights and tips.
 
 ## Contributing
 
-We encourage contributions from the community! If you have additional cheatsheets, tips, or corrections, please submit a pull request. Together, we can make this repository a valuable reference for anyone working with Kubernetes.
+We encourage contributions from the community! If you have additional cheatsheets, tips, or corrections, please submit a pull request. Together, we can make this repository a valuable reference for anyone working on DevOps path.
 
 <ul class="list-style-none">
 {% for contributor in site.github.contributors %}

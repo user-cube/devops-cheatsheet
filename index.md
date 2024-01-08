@@ -10,11 +10,17 @@ last_modified_date: 2024-01-07
 Welcome to the DevOps Cheatsheets Repository! This repository serves as a comprehensive resource for DevOps enthusiasts, providing a collection of cheatsheets and relevant information to help you navigate and master the DevOps role.
 
 ![DevOps](https://user-cube.github.io/devops-cheatsheet/assets/images/devops.jpg)
+
 ## Table of Contents
 
 1. [Kubernetes](/docs/kubernetes/)
    - [Kubernetes Basics](/docs/kubernetes/cheatsheets/)
       - [Pods](/docs/kubernetes/cheatsheets/)
+2. [Git](/docs/git/)
+   - [Git Hooks](/docs/git/hooks)
+3. [CI/CD](/docs/cicd/)
+   - [GitHub Actions](/docs/cicd/actions/)
+      - [Test GitHub Actions Locally](/docs/cicd/actions/test-locally)
 
 ## How to Use
 

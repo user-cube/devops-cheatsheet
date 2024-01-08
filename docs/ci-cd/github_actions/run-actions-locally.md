@@ -96,6 +96,8 @@ In order to use Docker on MacOs you just need to install the .dmg package from D
 
 You can find more information about act install in their [official documentation](https://github.com/nektos/act?tab=readme-ov-file#installation-through-package-managers).
 
+![Act](https://user-cube.github.io/devops-cheatsheet/assets/images/act.gif)
+
 ### Windows
 
 To install act you windows you can use one of the following:

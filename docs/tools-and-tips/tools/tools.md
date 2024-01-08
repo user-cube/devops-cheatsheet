@@ -31,7 +31,7 @@ Easy tool to interact with a Kubernetes environment.
 
 Easy tool to interact with a Kubernetes environment.
 
-![K8S Lens](https://user-cube.github.io/devops-cheatsheet/assets/images/tools/k9s.png)
+![K8S Lens](https://user-cube.github.io/devops-cheatsheet/assets/images/tools/k8s-lens.png)
 
 [Download K8S Lens](https://k8slens.dev/)
 

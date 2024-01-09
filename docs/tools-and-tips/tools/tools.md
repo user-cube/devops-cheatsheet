@@ -3,6 +3,7 @@ title: Tools
 layout: home
 parent: Tools & Tips
 nav_order: 1
+has_children: true
 permalink: docs/tols-and-tips/tools
 last_modified_date: 2024-01-08
 ---

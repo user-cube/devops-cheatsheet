@@ -23,6 +23,10 @@ Welcome to the DevOps Cheatsheets Repository! This repository serves as a compre
       - [Test GitHub Actions Locally](/docs/cicd/actions/test-locally)
 4. [Crontabs](/docs/crontab/)
    - [Crontab Cheat Sheet](/docs/crontab/cheatsheets/)
+5. [Docker](/docs/docker/)
+   - [Dockerfiles](/docs/docker/dockerfiles/)
+6. [Tools & Tips](/docs/tols-and-tips/)
+   - [Tools](/docs/tols-and-tips/tools)
 
 ## How to Use
 

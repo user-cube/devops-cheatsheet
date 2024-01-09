@@ -57,7 +57,7 @@ To setup the K9S to use the Kubernetes cluster you need to configure the KUBECON
 k9s
 ```
 
-![k9s](https://user-cube.github.io/devops-cheatsheet/assets/images/tools/k9s-execute.png)
+![k9s](https://user-cube.github.io/devops-cheatsheet/assets/images/k9s-execute.png)
 
 ## Interact with K9S
 

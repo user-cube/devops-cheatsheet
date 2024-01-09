@@ -1,0 +1,107 @@
+---
+title: K9S
+layout: home
+grand_parent: Tools & Tips
+parent: Tools
+nav_order: 1
+permalink: docs/tols-and-tips/tools/k9s
+last_modified_date: 2024-01-09
+---
+
+# K9S
+
+K9s is a terminal based UI to interact with your Kubernetes clusters. The aim of this project is to make it easier to navigate, observe and manage your deployed applications in the wild. K9s continually watches Kubernetes for changes and offers subsequent commands to interact with your observed resources.
+
+## Table of contents
+
+## Features
+
+- Information At Your Finger Tips!
+    - Tracks in real-time activities of resources running in your Kubernetes cluster.
+- Standard or CRD?
+    - Handles both Kubernetes standard resources as well as custom resource definitions.
+- Cluster Metrics
+    - Tracks real-time metrics associates with resources such as pods, containers and nodes.
+- Power Users Welcome!
+    - Provides standard cluster management commands such as logs, scaling, port-forwards, restarts…
+    - Define your own command shortcuts for quick navigation via command aliases and hotkeys.
+    - Plugin support to extend K9s to create your very own cluster commands.
+    - Powerful filtering mode to allow user to drill down and view workload related resources.
+- Error Zoom
+    - Drill down directly to what’s wrong with your cluster’s resources.
+- Skinnable and Customizable
+    - Define your very own look and feel via K9s skins.
+    - Customize/Arrange which columns to display on a per resource basis.
+- Narrow or Wide?
+    - Provides toggles to view minimal or full resource definitions
+- MultiResources Views
+    - Provides for an overview of your cluster resources via Pulses and XRay views.
+- We’ve got your RBAC!
+    - Supports for viewing RBAC rules such as cluster/roles and their associated bindings.
+    - Reverse lookup to asserts what a user/group or ServiceAccount can do on your clusters.
+
+- Built-in Benchmarking
+    - You can benchmark your HTTP services/pods directly from K9s to see how your application fare and adjust your resources request/limit accordingly.
+- Resource Graph Traversals
+    - K9s provides for easy traversal of Kubernetes resources and their associated resources.
+
+## Setup and Install
+
+To install K9S please follow the instructions on K9S confluence page.
+To setup the K9S to use the Kubernetes cluster you need to configure the KUBECONFIG file. Please follow the setup guide present in the following confluence page: Kubernetes. If you are using multiple cluster please follow the documentation for  Configure Access to Multiple Clusters.
+**Note**: K9S tool is installed on the kubernetes master node.
+
+## Launch K9S
+
+```bash
+k9s
+```
+
+![k9s](https://user-cube.github.io/devops-cheatsheet/assets/images/tools/k9s-execute.png)
+
+## Interact with K9S
+
+### CLI Arguments
+
+K9s CLI comes with a view arguments that you can use to launch the tool with different configuration.
+
+```bash
+# List all available CLI options
+k9s help
+# Get info about K9s runtime (logs, configs, etc..)
+k9s info
+# Run K9s in a given namespace.
+k9s -n mycoolns
+# Run K9s and launch in pod view via the pod command.
+k9s -c pod
+# Start K9s in a non default KubeConfig context
+k9s --context coolCtx
+# Start K9s in readonly mode - with all modification commands disabled
+k9s --readonly
+```
+
+| Action                                                                         | Command                     | Comment                                                                |
+|--------------------------------------------------------------------------------|-----------------------------|------------------------------------------------------------------------|
+| Show active keyboard mnemonics and help                                        | ?                           |                                                                        |
+| Show all available resource alias                                              | ctrl-a                      |                                                                        |
+| To bail out of K9s                                                             | :q, ctrl-c                  |                                                                        |
+| View a Kubernetes resource using singular/plural or short-name                 | :pod⏎                       | accepts singular, plural, short-name or alias ie pod or pods           |
+| View a Kubernetes resource in a given namespace                                | :pod ns-x⏎                  |                                                                        |
+| View filtered pods (New v0.30.0!)                                              | :pod /fred⏎                 | View all pods filtered by fred                                         |
+| View labeled pods (New v0.30.0!)                                               | :pod app=fred,env=dev⏎      | View all pods with labels matching app=fred and env=dev                |
+| View pods in a given context (New v0.30.0!)                                    | :pod @ctx1⏎                 | View all pods in context ctx1. Switches out your current k9s context!  |
+| Filter out a resource view given a filter                                      | /filter⏎                    | Regex2 supported ie fred\|blee to filter resources named fred or blee  |
+| Inverse regex filter                                                           | /! filter⏎                  | Keep everything that doesn’t match.                                    |
+| Filter resource view by labels                                                 | /-l label-selector⏎         |                                                                        |
+| Fuzzy find a resource given a filter                                           | /-f filter⏎                 |                                                                        |
+| Bails out of view/command/filter mode                                          | <esc>                       |                                                                        |
+| Key mapping to describe, view, edit, view logs,…                               | d,v, e, l,…                 |                                                                        |
+| To view and switch to another Kubernetes context (Pod view)                    | :ctx⏎                       |                                                                        |
+| To view and switch directly to another Kubernetes context (Last used view)     | :ctx context-name⏎          |                                                                        |
+| To view and switch to another Kubernetes namespace                             | :ns⏎                        |                                                                        |
+| To view all saved resources                                                    | :screendump or sd⏎          |                                                                        |
+| To delete a resource (TAB and ENTER to confirm)                                | ctrl-d                      |                                                                        |
+| To kill a resource (no confirmation dialog, equivalent to kubectl delete –now) | ctrl-k                      |                                                                        |
+| Launch pulses view                                                             | :pulses or pu⏎              |                                                                        |
+| Launch XRay view                                                               | :xray RESOURCE [NAMESPACE]⏎ | RESOURCE can be one of po, svc, dp, rs, sts, ds, NAMESPACE is optional |
+| Launch Popeye view                                                             | :popeye or pop⏎             | See popeye                                                             |

@@ -5,7 +5,7 @@ nav_order: 1
 parent: Docker
 has_children: true
 permalink: docs/docker/dockerfiles
-last_modified_date: 2024-01-08
+last_modified_date: 2024-01-11
 ---
 
 # Dockerfiles

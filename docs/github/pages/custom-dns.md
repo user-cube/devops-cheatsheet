@@ -14,6 +14,12 @@ GitHub Pages allows you to use a custom domain for your websites, which means yo
 
 ## Table of Contents
 
+- [Custom DNS](#custom-dns)
+  * [Table of Contents](#table-of-contents)
+  * [Create CNAME file](#create-cname-file)
+  * [Crate DNS CNAME record](#crate-dns-cname-record)
+    + [Configure DNS with Cloudflare](#configure-dns-with-cloudflare)
+  * [Configure GitHub Pages](#configure-github-pages)
 
 ## Create CNAME file
 

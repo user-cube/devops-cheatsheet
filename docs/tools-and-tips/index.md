@@ -1,7 +1,7 @@
 ---
 title: Tools & Tips
 layout: home
-nav_order: 7
+nav_order: 8
 has_children: true
 permalink: docs/tols-and-tips
 last_modified_date: 2024-01-07

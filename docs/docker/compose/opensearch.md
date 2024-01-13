@@ -21,8 +21,8 @@ OpenSearch is commonly used for log and event data analysis, full-text search ap
 - [OpenSearch Compose File](#opensearch-compose-file)
   * [Table of Contents](#table-of-contents)
   * [Compose file](#compose-file)
-  * [Flag DISABLE_SECURITY_PLUGIN](#flag-disable_security_plugin)
-  * [Step by Step](#step-by-step)
+    + [Flag DISABLE_SECURITY_PLUGIN](#flag-disable_security_plugin)
+    + [Step by step](#step-by-step)
 
 ## Compose file
 
@@ -57,7 +57,7 @@ The provided Docker Compose file sets up a service for OpenSearch, an open-sourc
 
 This configuration allows for the deployment of OpenSearch with specific settings for cluster and node names, memory allocation, and data persistence. Additionally, it exposes the necessary ports for accessing OpenSearch and sets up memory lock ulimits for the container.
 
-## Flag DISABLE_SECURITY_PLUGIN
+### Flag DISABLE_SECURITY_PLUGIN
 
 The `DISABLE_SECURITY_PLUGIN=true` environment variable is used to disable the security plugin in OpenSearch. This may be necessary in certain development or testing scenarios where you want to run OpenSearch without security features enabled.
 
@@ -67,7 +67,7 @@ It's crucial to carefully consider the implications of disabling the security pl
 
 This flag is very usefull if you are plugins like [ElasticVue](https://elasticvue.com/) for you local deployments. Elasticvue is a free and open-source elasticsearch gui for the browser.
 
-## Step by Step
+### Step by Step
 
 1. Version: The version field specifies the version of the Docker Compose file format being used, in this case, version 3.
 

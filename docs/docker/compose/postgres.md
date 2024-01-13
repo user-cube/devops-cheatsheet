@@ -21,7 +21,7 @@ PostgreSQL is commonly used for web applications, data warehousing, and geospati
 - [Postgres Compose File](#postgres-compose-file)
   * [Table of Contents](#table-of-contents)
   * [Compose file](#compose-file)
-  * [Step by step](#step-by-step)
+    + [Step by step](#step-by-step)
 
 ## Compose file
 
@@ -55,7 +55,7 @@ volumes:
 
 The provided Docker Compose file defines a service for PostgreSQL using the version 13 of the PostgreSQL image. It sets up port mapping for accessing the PostgreSQL server, mounts a volume for data persistence, and defines environment variables for the PostgreSQL database name, user, password, data directory, and initialization arguments. Additionally, it includes a health check configuration for the PostgreSQL service.
 
-## Step by step
+### Step by step
 
 1. The version field specifies the version of the Docker Compose file format being used, in this case, version 3.8.
 

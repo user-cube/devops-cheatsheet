@@ -16,6 +16,15 @@ PostgreSQL is commonly used for web applications, data warehousing, and geospati
 
 ![postgres](https://user-cube.github.io/devops-cheatsheet/assets/images/docker/postgres-logo.png)
 
+## Table of Contents
+
+- [Postgres Compose File](#postgres-compose-file)
+  * [Table of Contents](#table-of-contents)
+  * [Compose file](#compose-file)
+  * [Step by step](#step-by-step)
+
+## Compose file
+
 ```yml
 version: '3.8'
 

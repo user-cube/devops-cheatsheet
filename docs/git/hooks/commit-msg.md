@@ -1,17 +1,14 @@
 ---
-title: Git Hooks
+title: Commit Message Hook
 layout: home
 nav_order: 1
-parent: Git
-permalink: docs/git/hooks
-last_modified_date: 2024-01-07
+grand_parent: Git
+parent: Git Hooks
+permalink: docs/git/hooks/commit-msg
+last_modified_date: 2024-01-13
 ---
 
-## Git Hooks
-
-Git hooks allow you to execute custom scripts at various stages of the Git workflow. They can be used for tasks such as pre-commit checks or post-merge actions, providing automation capabilities.
-
-## Commit Message
+# Commit Message
 
 Incorporating the branch name into your commit messages can offer valuable context and simplify the process of tracing changes back to their origin.
 

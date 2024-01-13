@@ -22,6 +22,8 @@ Welcome to the DevOps Cheatsheets Repository! This repository serves as a compre
    - [K3S](/docs/kubernetes/k3s)
 2. [Git](/docs/git)
    - [Git Hooks](/docs/git/hooks)
+      - [Commit Message Hook](/docs/git/hooks/commit-msg)
+      - [Pre Push Hook](/docs/git/hooks/pre-push)
    - [Git Contributors Information Change](/docs/git/contributors-data)
 3. [CI/CD](/docs/cicd)
    - [GitHub Actions](/docs/cicd/actions)

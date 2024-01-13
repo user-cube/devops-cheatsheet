@@ -11,7 +11,7 @@ last_modified_date: 2024-01-07
 
 CI/CD, which stands for Continuous Integration and Continuous Deployment (or Continuous Delivery), encompasses a set of practices and tools utilized by software development teams to automate the process of building, testing, and deploying software changes. The primary objective is to enhance the efficiency, reliability, and speed of the development and release process.
 
-![CI/CD](https://user-cube.github.io/devops-cheatsheet/assets/images/cicd.png)
+![CI/CD](https://user-cube.github.io/devops-cheatsheet/assets/images/devops-process.png)
 
 ## Continuous Integration (CI):
 

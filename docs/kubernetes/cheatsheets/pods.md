@@ -9,12 +9,23 @@ last_modified_date: 2024-01-07
 
 # Kubernetes Pods
 
+A Pod is a Kubernetes abstraction that represents a group of one or more application containers (such as Docker), and some shared resources for those containers. Those resources include:
+
+- Shared storage, as Volumes
+- Networking, as a unique cluster IP address
+- Information about how to run each container, such as the container image version or specific ports to use
+
+A Pod models an application-specific "logical host" and can contain different application containers which are relatively tightly coupled. For example, a Pod might include both the container with your Node.js app as well as a different container that feeds the data to be published by the Node.js webserver. The containers in a Pod share an IP Address and port space, are always co-located and co-scheduled, and run in a shared context on the same Node.
+
+Pods are the atomic unit on the Kubernetes platform. When we create a Deployment on Kubernetes, that Deployment creates Pods with containers inside them (as opposed to creating containers directly). Each Pod is tied to the Node where it is scheduled, and remains there until termination (according to restart policy) or deletion. In case of a Node failure, identical Pods are scheduled on other available Nodes in the cluster.
+
+![Pods Overview](https://user-cube.github.io/devops-cheatsheet/assets/images/kubernetes/pods.svg)
+
 ## Table of Contents
 
 - [Kubernetes Pods](#kubernetes-pods)
   * [Table of Contents](#table-of-contents)
   * [Cheat Sheet](#cheat-sheet)
-- [Kubernetes Pods Overview](#kubernetes-pods-overview)
 
 ## Cheat Sheet
 
@@ -41,17 +52,3 @@ last_modified_date: 2024-01-07
 | List all replication controllers and services together in ps output format            | `kubectl get rc,services`                                                                                   |
 | List one or more resources by their type and names                                    | `kubectl get rc/<NAME> service/<NAME> pods/<NAME>`                                                          |
 | Run command on a running pod                                                          | `kubectl exec -it <NAME> -- <COMMAND_TO_BE_EXECUTED>`                                                       |
-
-# Kubernetes Pods Overview
-
-A Pod is a Kubernetes abstraction that represents a group of one or more application containers (such as Docker), and some shared resources for those containers. Those resources include:
-
-- Shared storage, as Volumes
-- Networking, as a unique cluster IP address
-- Information about how to run each container, such as the container image version or specific ports to use
-
-A Pod models an application-specific "logical host" and can contain different application containers which are relatively tightly coupled. For example, a Pod might include both the container with your Node.js app as well as a different container that feeds the data to be published by the Node.js webserver. The containers in a Pod share an IP Address and port space, are always co-located and co-scheduled, and run in a shared context on the same Node.
-
-Pods are the atomic unit on the Kubernetes platform. When we create a Deployment on Kubernetes, that Deployment creates Pods with containers inside them (as opposed to creating containers directly). Each Pod is tied to the Node where it is scheduled, and remains there until termination (according to restart policy) or deletion. In case of a Node failure, identical Pods are scheduled on other available Nodes in the cluster.
-
-![Pods Overview](https://user-cube.github.io/devops-cheatsheet/assets/images/pods.svg)

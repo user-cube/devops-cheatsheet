@@ -12,7 +12,7 @@ last_modified_date: 2024-01-07
 
 GitHub Actions is a platform provided by GitHub for continuous integration and continuous delivery (CI/CD). It enables the automation of various tasks in the software development workflow directly within the GitHub repository. With GitHub Actions, custom workflows can be defined to build, test, and deploy code.
 
-![GitHub Actions](https://user-cube.github.io/devops-cheatsheet/assets/images/github-actions.png)
+![GitHub Actions](https://user-cube.github.io/devops-cheatsheet/assets/images/github/github-actions.png)
 
 Key features of GitHub Actions include:
 

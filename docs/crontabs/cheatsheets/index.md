@@ -56,4 +56,4 @@ Explanation:
 
 Feel free to customize the examples based on your specific scheduling needs. Always double-check your crontab entries, and consider testing commands outside of crontab before scheduling them.
 
-![Crontab Cheat Sheet](https://user-cube.github.io/devops-cheatsheet/assets/images/crontab_cheatsheet.png)
+![Crontab Cheat Sheet](https://user-cube.github.io/devops-cheatsheet/assets/images/crontabs/crontab_cheatsheet.png)

@@ -1,7 +1,7 @@
 ---
 title: K3S
 layout: home
-nav_order: 1
+nav_order: 2
 parent: Kubernetes
 has_children: true
 permalink: docs/kubernetes/k3s

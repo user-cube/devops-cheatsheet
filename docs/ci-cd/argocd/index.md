@@ -4,7 +4,7 @@ layout: home
 nav_order: 2
 parent: CI/CD
 has_children: true
-permalink: docs/cicd/argocd/
+permalink: docs/cicd/argocd
 last_modified_date: 2024-01-13
 ---
 

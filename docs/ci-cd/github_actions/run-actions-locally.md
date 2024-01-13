@@ -40,7 +40,7 @@ In order to test Github Actions Workflows locally you will need the following to
 
 ## Installing Docker
 
-![GitHub Actions](https://user-cube.github.io/devops-cheatsheet/assets/images/docker.png)
+![GitHub Actions](https://user-cube.github.io/devops-cheatsheet/assets/images/docker/docker-logo.png)
 
 ### Windows 
 
@@ -96,7 +96,7 @@ In order to use Docker on MacOS you just need to install the .dmg package from D
 
 You can find more information about installing act in their [official documentation](https://github.com/nektos/act?tab=readme-ov-file#installation-through-package-managers).
 
-![Act](https://user-cube.github.io/devops-cheatsheet/assets/images/act.gif)
+![Act](https://user-cube.github.io/devops-cheatsheet/assets/images/act/act.gif)
 
 ### Windows
 
@@ -142,7 +142,7 @@ brew install act
 
 ## Run Github Actions locally
 
-![Act log](https://user-cube.github.io/devops-cheatsheet/assets/images/act-log.png)
+![Act log](https://user-cube.github.io/devops-cheatsheet/assets/images/act/act-log.png)
 
 Now that we have our environment set we just need to clone the git repository we want to test. Once we have the repo cloned we need to get into the root folder where we can find the folder `.github/workflows`.
 
@@ -197,7 +197,7 @@ WARNING: `GITHUB_TOKEN` will be logged in shell history if not inserted through 
 - Verify your email address, if it hasn’t been verified yet.
 - In the upper-right corner of any page, click your profile photo, then click Settings.
 
-![PAT](https://user-cube.github.io/devops-cheatsheet/assets/images/gh-pat.png)
+![PAT](https://user-cube.github.io/devops-cheatsheet/assets/images/github/gh-pat.png)
 
 - In the left sidebar, click Developer settings.
 
@@ -215,7 +215,7 @@ WARNING: `GITHUB_TOKEN` will be logged in shell history if not inserted through 
 
 - Optionally, to copy the new token to your clipboard, click .
 
-![PAT2](https://user-cube.github.io/devops-cheatsheet/assets/images/gh-pat2.png)
+![PAT2](https://user-cube.github.io/devops-cheatsheet/assets/images/github/gh-pat2.png)
 
 - To use your token to access resources owned by an organization that uses SAML single sign-on, authorize the token. For more information, see “Authorizing a personal access token for use with SAML single sign-on” in the GitHub Enterprise Cloud documentation.
 

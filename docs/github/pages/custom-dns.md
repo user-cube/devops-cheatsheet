@@ -23,7 +23,7 @@ To create a CNAME file for your custom domain, follow these steps:
 2. Name the file "CNAME" (without any file extension).
 3. Open the "CNAME" file and add your custom domain (e.g., example.com) as the content of the file.
 
-You can consult an example at [https://github.com/user-cube/devops-cheatsheet/blob/main/CNAME](https://github.com/user-cube/devops-cheatsheet/blob/main/CNAME)
+You can consult an example at [CNAME](https://github.com/user-cube/devops-cheatsheet/blob/main/CNAME)
 
 ## Crate DNS CNAME record
 

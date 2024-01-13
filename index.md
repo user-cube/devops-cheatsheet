@@ -16,6 +16,7 @@ Welcome to the DevOps Cheatsheets Repository! This repository serves as a compre
 1. [Kubernetes](/devops-cheatsheet/docs/kubernetes)
    - [Kubernetes Basics](/devops-cheatsheet/docs/kubernetes/cheatsheets)
       - [Pods](/devops-cheatsheet/docs/kubernetes/cheatsheets)
+   - [K3S](/devops-cheatsheet/docs/kubernetes/k3s)
 2. [Git](/devops-cheatsheet/docs/git)
    - [Git Hooks](/devops-cheatsheet/docs/git/hooks)
    - [Git Contributors Information Change](/devops-cheatsheet/docs/git/contributors-data)

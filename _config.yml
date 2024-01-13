@@ -22,6 +22,7 @@ exclude:
    - CNAME
    - LICENSE
    - README.md
+   - CODE_OF_CONDUCT.md
 
 url: https://devops.ruicoelho.pt
 

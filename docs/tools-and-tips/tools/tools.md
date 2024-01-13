@@ -67,3 +67,52 @@ Cursor is an AI-first code editor designed for pair-programming. It offers featu
 ![Cursor](https://user-cube.github.io/devops-cheatsheet/assets/images/tools/cursor.png)
 
 [Download Cursor](https://cursor.sh/)
+
+## csv2md
+
+### Install with:
+
+```bash
+npm install -g csv2md
+```
+
+Small tool to convert (larger) csv to markdown tables. Processes stdin or csv file.
+
+### Usage
+
+```bash
+csv2md data.csv > data.md
+```
+
+Piping data is possible (and recommend for larger files):
+
+```bash
+csv2md < data.csv
+
+    max_i | min_i | max_f | min_f
+    ---|---|---|---
+    -122.1430195 | -122.1430195 | -122.415278 | 37.778643
+    -122.1430195 | -122.1430195 | -122.40815 | 37.785034
+    -122.4194155 | -122.4194155 | -122.4330827 | 37.7851673
+```
+
+To write the resulting markdown to a file, use the familiar stream syntax:
+
+```bash
+csv2md < data.csv > data.md
+```
+### Pretty Markdown
+The pretty / p option will pad cells to uniform width and uses beginning and ending |-delimiters by default:
+
+```bash
+csv2md -p < data.csv
+
+  | max_i        | min_i        | max_f        | min_f      |
+  |--------------|--------------|--------------|------------|
+  | -122.1430195 | -122.1430195 | -122.415278  | 37.778643  |
+  | -122.1430195 | -122.1430195 | -122.40815   | 37.785034  |
+  | -122.4194155 | -122.4194155 | -122.4330827 | 37.7851673 |
+```
+It's much more human readable than the default inline-style but will disable stream processing.
+
+You can find more information about this tool on their [official GitHub](https://github.com/pstaender/csv2md)

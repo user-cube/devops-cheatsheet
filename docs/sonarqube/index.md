@@ -8,11 +8,11 @@ last_modified_date: 2024-01-13
 
 # Sonarqube
 
-SonarQube is an open-source platform for continuous inspection of code quality. It provides static code analysis to detect bugs, code smells, and security vulnerabilities in various programming languages. SonarQube integrates with build systems and code repositories to automatically analyze code quality as part of the development process.
+SonarQube is an open-source platform for continuous code quality inspection. It performs static code analysis to identify bugs, code smells, and security vulnerabilities in various programming languages. SonarQube seamlessly integrates with build systems and code repositories to automatically assess code quality during the development process.
 
-SonarQube supports a wide range of programming languages and offers detailed reports on code quality metrics, such as code duplication, complexity, and test coverage. It also provides security-focused analysis to identify potential security vulnerabilities in the codebase.
+Supporting a wide array of programming languages, SonarQube provides comprehensive reports on code quality metrics, including code duplication, complexity, and test coverage. It also offers security-focused analysis to pinpoint potential vulnerabilities within the codebase.
 
-Developers and teams use SonarQube to maintain and improve the quality of their code, ensuring that it meets industry standards and best practices. By integrating SonarQube into the development workflow, teams can proactively identify and address code quality issues, leading to more reliable and secure software.
+Development teams rely on SonarQube to uphold and enhance their code quality, ensuring compliance with industry standards and best practices. By integrating SonarQube into the development workflow, teams can proactively detect and address code quality issues, resulting in more dependable and secure software.
 
 
 ![sonarqube](https://user-cube.github.io/devops-cheatsheet/assets/images/sonarqube/sonarqube-logo.png)
@@ -28,11 +28,11 @@ Developers and teams use SonarQube to maintain and improve the quality of their 
 
 ## LDAP Integration
 
-In order to integrate SonarQube with LDAP we need to define a couple parameters on sonar. This parameters can be set directly on the helm or being used in secrets. Since LDAP contains sensitive information like passwords we are going to deploy this configurations using secrets.
+To integrate SonarQube with LDAP, specific parameters need to be defined in the Sonar configuration. As LDAP contains sensitive information such as passwords, these configurations should be deployed using secrets.
 
 ### Vault
 
-Since we defined that vault is our way of storing secrets, we need to create a new entry (for this case we defined a collection called `kv`). Our secret should contain the following parameters:
+As we have chosen Vault as our method for storing secrets, a new entry needs to be created in the 'kv' collection. The secret should contain the following parameters:
 
 ```
 ldap.bindPassword=<BIND_PASSWORD>
@@ -48,14 +48,14 @@ ldap.group.request=(&(cn={0})(objectclass=group))
 ldap.group.idAttribute=memberOf
 ```
 
-You will need to set `BIND_PASSWORD`, `BIND_DN`, `LDAP_URL`, `LDAP_USER_BASE_DN` and `LDAP_GROUP_BASE_DN` to your own configurations.
-**Note**: Depending on your configuration you might need to adjust other parameters, this is just an example of basic configurations.
+The `BIND_PASSWORD`, `BIND_DN`, `LDAP_URL`, `LDAP_USER_BASE_DN`, and `LDAP_GROUP_BASE_DN` parameters need to be set according to your specific configurations.
+**Note**: Depending on your setup, adjustments to other parameters may be necessary. The provided configurations are a basic example.
 
 ![sonar-secret](https://user-cube.github.io/devops-cheatsheet/assets/images/sonarqube/sonar-secret.png)
 
-### Create external secret
+### Create External Secret
 
-Now we need to create an external secret in order to use this secret stored on vault. You can create the external secret as follows (`sonarqube-properties.yaml`):
+An external secret must be created to utilize the secret stored in Vault. You can create the external secret as follows (`sonarqube-properties.yaml`):
 
 ```yaml
 apiVersion: external-secrets.io/v1beta1
@@ -80,13 +80,13 @@ spec:
     name: sonar-properties
 ```
 
-Now you need to apply this on the cluster:
+Apply this to the cluster as follows:
 
 ```bash
 kubectl apply -f sonarqube-properties.yaml
 ```
 
-The externalsecret deployed should look like this:
+The deployed external secret should resemble the following:
 
 ```bash
 kubectl get externalsecrets -n sonarqube
@@ -95,12 +95,12 @@ NAME                                      
 clustersecretstore.external-secrets.io/vault-backend   168d
  
 NAME                                                  STORE           REFRESH INTERVAL   STATUS
-externalsecret.external-secrets.io/sonar-properties   vault-backend   3600s              SecretSynced
+externalsecret.external-secrets.io/sonar-properties   vault-backend   3600s             SecretSynced
 ```
 
-### Update sonarqube helm
+### Update Sonarqube Helm
 
-Now that everything is in place you need to update the helm. Look for this content in the values file and update it like this:
+With everything in place, the Sonarqube helm needs to be updated. Locate the content in the values file and update it as follows:
 
 ```yaml
    sonar.forceAuthentication: true
@@ -112,9 +112,9 @@ Now that everything is in place you need to update the helm. Look for this conte
 sonarSecretProperties: sonar-properties
 ```
 
-This content should be on line ~350 line.
+This content should be around line ~350.
 
-Now you only need to upgrade the sonarqube helm:
+Now, simply upgrade the Sonarqube helm:
 
 ```bash
 helm upgrade sonarqube -n sonarqube -f values/sonarqube-values.yaml sonarqube/sonarqube --version 4.0.0+315

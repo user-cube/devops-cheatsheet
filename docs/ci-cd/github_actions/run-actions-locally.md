@@ -44,7 +44,7 @@ In order to test Github Actions Workflows locally you will need the following to
 
 ### Windows 
 
-First we need to enabe WSL, open Powershell as Administrator and run:
+First we need to enable WSL, open Powershell as Administrator and run:
 
 ```powershell
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
@@ -56,7 +56,7 @@ After this you will need to restart your computer. Once the computer is restarte
 wsl --list
 ```
 
-Now you just need to go on Docker website on dowload [Docker Desktop client](https://docs.docker.com/desktop/install/windows-install/). This will automatically install Docker for you.
+Now you just need to go to the Docker website and download the [Docker Desktop client](https://docs.docker.com/desktop/install/windows-install/). This will automatically install Docker for you.
 
 ### Linux (Ubuntu)
 
@@ -86,21 +86,21 @@ sudo groupadd docker
 sudo usermod -aG docker $USER
 ```
 
-If you are using another Linux Distro you can find more information about how to install Docker on [Docker documentation](https://docs.docker.com/desktop/install/mac-install/).
+If you are using another Linux Distro you can find more information about how to install Docker on the [Docker documentation](https://docs.docker.com/desktop/install/mac-install/).
 
 ### MacOS
 
-In order to use Docker on MacOs you just need to install the .dmg package from Docker [oficial documentation](https://docs.docker.com/desktop/install/mac-install/).
+In order to use Docker on MacOS you just need to install the .dmg package from Docker [official documentation](https://docs.docker.com/desktop/install/mac-install/).
 
 ## Install Act
 
-You can find more information about act install in their [official documentation](https://github.com/nektos/act?tab=readme-ov-file#installation-through-package-managers).
+You can find more information about installing act in their [official documentation](https://github.com/nektos/act?tab=readme-ov-file#installation-through-package-managers).
 
 ![Act](https://user-cube.github.io/devops-cheatsheet/assets/images/act.gif)
 
 ### Windows
 
-To install act you windows you can use one of the following:
+To install act on Windows you can use one of the following:
 
 ```powershell
 choco install act-cli
@@ -128,7 +128,7 @@ curl -s https://raw.githubusercontent.com/nektos/act/master/install.sh | sudo ba
 
 ### MacOS
 
-In MacOs you can install it using brew. To install brew you can execute the following command:
+In MacOS you can install it using brew. To install brew you can execute the following command:
 
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -219,9 +219,9 @@ WARNING: `GITHUB_TOKEN` will be logged in shell history if not inserted through 
 
 - To use your token to access resources owned by an organization that uses SAML single sign-on, authorize the token. For more information, see “Authorizing a personal access token for use with SAML single sign-on” in the GitHub Enterprise Cloud documentation.
 
-You can find more information about Github Personal Accces Tokens on [Github Documentation](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic).
+You can find more information about Github Personal Access Tokens on [Github Documentation](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic).
 
-### Use MacOs to avoid plaintext
+### Use MacOS to avoid plaintext
 
 ![Keychain](https://user-cube.github.io/devops-cheatsheet/assets/images/macos-keychain.png)
 
@@ -237,7 +237,7 @@ Export Github Token:
 export GITHUB_TOKEN=$(security find-generic-password -a ${USER} -s github_pat_<ACCOUNT> -w)
 ```
 
-If you want you can add it on your `~/.bashrc` or `~/.zshrc` file. In this case you will need to reload your configurations, you can do it by executing the following command:
+If you want you can add it to your `~/.bashrc` or `~/.zshrc` file. In this case you will need to reload your configurations, you can do it by executing the following command:
 
 ```bash
 source ~/.zshrc # Change it to ~/.bashrc if you are using bash instead of zsh
@@ -249,7 +249,7 @@ Edit act configurations file available on `~/.actrc` and add the following line:
 -s GITHUB_TOKEN=$GITHUB_TOKEN
 ```
 
-By doing this everything time you run act the build will automatically add your Personal Access Token to the execution.
+By doing this every time you run act the build will automatically add your Personal Access Token to the execution.
 
 ## Conclusions
 

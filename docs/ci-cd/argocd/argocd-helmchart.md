@@ -263,3 +263,4 @@ styles: |
       background-image: url(<ADDRESS_TO_YOUR_LOGO>);
   }
 ```
+

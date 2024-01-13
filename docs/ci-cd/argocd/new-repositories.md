@@ -1,5 +1,5 @@
 ---
-title: ArgoCD add new repositories
+title: ArgoCD Add New Repositories
 layout: home
 nav_order: 3
 grand_parent: CI/CD

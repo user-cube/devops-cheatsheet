@@ -28,12 +28,12 @@ On the helm values file we need to add the repository we want to be connected on
 
 ```yaml
 repositories:
-  dgl-k8s-components:
-    url: ssh://git@<repository_url>/devops/dgl_k8s_components.git
+  k8s-components:
+    url: ssh://git@<repository_url>/devops/k8s_components.git
     type: git
     insecure: "true"
     project: default
-    name: dgl-k8s-components
+    name: k8s-components
 ```
 
 This will use the credentials below in order to grant access.

@@ -42,7 +42,7 @@ Welcome to the DevOps Cheatsheets Repository! This repository serves as a compre
 7. [GitHub](/devops-cheatsheet/docs/github)
    - [GitHub Pages](/devops-cheatsheet/docs/github/pages)
       - [Custom DNS](/devops-cheatsheet/docs/github/pages/custom-dns) 
-7. [Tools & Tips](/devops-cheatsheet/docs/tols-and-tips)
+8. [Tools & Tips](/devops-cheatsheet/docs/tols-and-tips)
    - [Tools](/devops-cheatsheet/docs/tols-and-tips/tools)
       - [K9S](/devops-cheatsheet/docs/tols-and-tips/tools/k9s)
       - [Kompose](/devops-cheatsheet/docs/tols-and-tips/tools/kompose)

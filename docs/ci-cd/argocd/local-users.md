@@ -59,7 +59,6 @@ data:
     p, role:devops-role, repositories, update, *, allow
     p, role:devops-role, repositories, delete, *, allow
     g, devops, role:devops-role
-    g, tibco, role:tibco-role
   policy.default: role:readonly
 ```
 

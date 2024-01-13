@@ -67,12 +67,12 @@ spec:
   data:
   - remoteRef:
       conversionStrategy: Default
-      key: kv/argocd/ldap
+      key: cluster-credentials/argocd/ldap
       property: ldap-bindDN
     secretKey: ldap-bindDN
   - remoteRef:
       conversionStrategy: Default
-      key: kv/argocd/ldap
+      key: cluster-credentials/argocd/ldap
       property: ldap-bindPW
     secretKey: ldap-bindPW
   refreshInterval: 3600s

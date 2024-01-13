@@ -32,7 +32,7 @@ To integrate SonarQube with LDAP, specific parameters need to be defined in the 
 
 ### Vault
 
-As we have chosen Vault as our method for storing secrets, a new entry needs to be created in the 'kv' collection. The secret should contain the following parameters:
+As we have chosen Vault as our method for storing secrets, a new entry needs to be created in the 'cluster-credentials' collection. The secret should contain the following parameters:
 
 ```
 ldap.bindPassword=<BIND_PASSWORD>
@@ -67,7 +67,7 @@ spec:
   data:
   - remoteRef:
       conversionStrategy: Default
-      key: kv/sonarqube/properties
+      key: cluster-credentials/sonarqube/properties
       property: sonar-secret
     secretKey: secret.properties
   refreshInterval: 3600s
@@ -117,5 +117,5 @@ This content should be around line ~350.
 Now, simply upgrade the Sonarqube helm:
 
 ```bash
-helm upgrade sonarqube -n sonarqube -f values/sonarqube-values.yaml sonarqube/sonarqube --version 4.0.0+315
+helm upgrade sonarqube -n sonarqube -f sonarqube-values.yaml sonarqube/sonarqube --version 4.0.0+315
 ```

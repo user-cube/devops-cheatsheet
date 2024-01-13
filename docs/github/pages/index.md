@@ -4,7 +4,7 @@ layout: home
 nav_order: 1
 parent: GitHub
 has_children: true
-permalink: docs/github/pages/
+permalink: docs/github/pages
 last_modified_date: 2024-01-13
 ---
 

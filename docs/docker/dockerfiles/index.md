@@ -5,7 +5,7 @@ nav_order: 1
 parent: Docker
 has_children: true
 permalink: docs/docker/dockerfiles
-last_modified_date: 2024-01-11
+last_modified_date: 2024-01-13
 ---
 
 # Dockerfiles
@@ -36,3 +36,10 @@ The Dockerfile supports the following instructions:
 | VOLUME      | Create volume mounts.                                       |
 | WORKDIR     | Change working directory.                                   |
 
+You will be able to find more information about Dockerfiles on [Docker Official Documentation](https://github.com/docker/docs/blob/main/_vendor/github.com/moby/buildkit/frontend/dockerfile/docs/reference.md)
+
+If you want to have this page available on you machine you can execute the following command:
+
+```bash
+wget https://raw.githubusercontent.com/docker/docs/main/_vendor/github.com/moby/buildkit/frontend/dockerfile/docs/reference.md > dockerfiles-reference.md
+```

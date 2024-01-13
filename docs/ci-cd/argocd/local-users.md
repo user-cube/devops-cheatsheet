@@ -12,8 +12,7 @@ last_modified_date: 2024-01-13
 
 <div markdown="block">
 {: .important }
-If you are using LDAP, you should consider using the [LDAP Integration Page](/devops-cheatsheet/docs/cicd/argocd/ldap-integration) and utilize LDAP Groups and Users instead. <br>
-This procedure has been replaced with LDAP user integrations. For more details, refer to the ArgoCD LDAP Integration page on confluence.
+If you are using LDAP, you should consider using the [LDAP Integration Page](/devops-cheatsheet/docs/cicd/argocd/ldap-integration) and utilize LDAP Groups and Users instead.
 </div>
 
 ## Table of Contents
@@ -60,7 +59,6 @@ data:
     p, role:devops-role, repositories, update, *, allow
     p, role:devops-role, repositories, delete, *, allow
     g, devops, role:devops-role
-    g, tibco, role:tibco-role
   policy.default: role:readonly
 ```
 

@@ -59,12 +59,12 @@ spec:
   data:
   - remoteRef:
       conversionStrategy: Default
-      key: kv/argocd/repositories
+      key: cluster-credentials/argocd/repositories
       property: ssh-private-key
     secretKey: sshPrivateKey
   - remoteRef:
       conversionStrategy: Default
-      key: kv/argocd/repositories
+      key: cluster-credentials/argocd/repositories
       property: ssh-url-credentials
     secretKey: url
   refreshInterval: 3600s

@@ -159,11 +159,6 @@ data:
     p, role:devops-role, repositories, update, *, allow
     p, role:devops-role, repositories, delete, *, allow
     p, role:devops-role, applications, *, */*, allow
-    p, role:infra-role, clusters, get, *, allow
-    p, role:infra-role, repositories, get, *, allow
-    p, role:infra-role, repositories, create, *, allow
-    p, role:infra-role, repositories, update, *, allow
-    p, role:infra-role, repositories, delete, *, allow
     p, role:developers-role, applications, create, */*, deny
     p, role:developers-role, applications, update, */*, deny
     p, role:developers-role, applications, delete, */*, allow
@@ -192,9 +187,8 @@ data:
     p, role:developers-role, exec, create, */*, deny
     g, DEVOPS, role:devops-role
     g, DEVELOPERS, role:developers-role
-    g, INFRA, role:infra-role
   policy.default: role:readonly
   scopes: '[groups,uid]'
 ```
 
-You need to define the field scopes and the field that adds the group user to the role: g, LDAP_GROUP_USER, role:ROLE_NAME.
+You need to define the field scopes and the field that adds the group user to the role: ```g, LDAP_GROUP_USER, role:ROLE_NAME```.

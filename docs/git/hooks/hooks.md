@@ -9,15 +9,15 @@ last_modified_date: 2024-01-07
 
 ## Git Hooks
 
-Git hooks enable you to run custom scripts at different points in the Git workflow. Whether it's pre-commit checks or post-merge actions, Git hooks provide automation possibilities.
+Git hooks allow you to execute custom scripts at various stages of the Git workflow. They can be used for tasks such as pre-commit checks or post-merge actions, providing automation capabilities.
 
 ## Commit Message
 
-Including the branch name in your commit messages can provide valuable context and make it easier to trace changes back to their source.
+Incorporating the branch name into your commit messages can offer valuable context and simplify the process of tracing changes back to their origin.
 
-Automating the inclusion of the branch name in your commit messages can be achieved using Git hooks. Git hooks are scripts that run at certain points in the Git workflow. You can create a pre-commit hook to automatically append the branch name to your commit messages. Here's an example of how you could do this using a pre-commit hook:
+Automating the inclusion of the branch name in commit messages can be accomplished using Git hooks. These are scripts that run at specific points in the Git workflow. For instance, you can create a pre-commit hook to automatically append the branch name to your commit messages. Here's an example of how you can achieve this using a pre-commit hook:
 
-**Step 1**: Navigate to your Git repository's .git/hooks directory.
+**Step 1**: Navigate to the .git/hooks directory in your Git repository.
 
 ```bash
 cd /path/to/your/repo/.git/hooks
@@ -35,15 +35,15 @@ chmod +x .git/hooks/commit-msg
 ```bash
 #!/bin/bash
 
-# Get branch name
+# Get the branch name
 BRANCH_NAME=$(git symbolic-ref --short HEAD)
 
-# List not allowed branches
+# List of disallowed branches
 DISALLOWED_BRANCHES=("main" "master" "develop")
 
-# Check if the branch we get is on the disallowed branches
+# Check if the obtained branch is in the disallowed branches list
 if [[ " ${DISALLOWED_BRANCHES[@]} " =~ " ${BRANCH_NAME} " ]]; then
-    echo "Branch não permitida. As branches main, master e develop não são permitidas."
+    echo "Branch not allowed. The main, master, and develop branches are not allowed."
     exit 1
 fi
 
@@ -54,5 +54,5 @@ sed -i.bak -e "1s/^/$BRANCH_NAME: /" "$1"
 rm "$1.bak"
 ```
 
-This script fetches the current branch name and appends it to the first line of the commit message. Adjust the script according to your needs.
+This script retrieves the current branch name and appends it to the first line of the commit message. Modify the script as per your requirements.
 Now, every time you make a commit, the branch name will be automatically added to the commit message.

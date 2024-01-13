@@ -20,7 +20,7 @@ To edit your crontab file, you can use the following command:
 crontab -e
 ```
 
-This opens the crontab file in the default text editor (often vi or nano).
+This command opens the crontab file in the default text editor (often vi or nano).
 
 ## Crontab Syntax:
 
@@ -69,6 +69,6 @@ To remove all your crontab entries, use the following command:
 crontab -r
 ```
 
-**Note**: Be cautious when editing crontab files, as incorrect entries can lead to unexpected behavior. It's a good practice to test your commands outside of crontab before scheduling them.
+**Note**: Exercise caution when editing crontab files, as incorrect entries can lead to unexpected behavior. It's a good practice to test your commands outside of crontab before scheduling them.
 
-Remember that the specific syntax and available features may vary slightly depending on the operating system and version.
+Keep in mind that the specific syntax and available features may vary slightly depending on the operating system and version.

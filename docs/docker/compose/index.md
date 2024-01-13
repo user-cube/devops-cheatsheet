@@ -13,12 +13,12 @@ last_modified_date: 2024-01-13
 <div markdown="block">
 {: .important }
 Docker's documentation refers to and describes Compose V2 functionality. <br>
-Effective July 2023, Compose V1 stopped receiving updates and is no longer in new Docker Desktop releases. Compose V2 has replaced it and is now integrated into all current Docker Desktop versions. For more information, see [Migrate to Compose V2](https://docs.docker.com/compose/migrate/).
+As of July 2023, Compose V1 has ceased to receive updates and is no longer included in new Docker Desktop releases. Compose V2 has replaced it and is now integrated into all current Docker Desktop versions. For more information, see [Migrate to Compose V2](https://docs.docker.com/compose/migrate/).
 </div>
 
-Compose is a tool for defining and running multi-container Docker applications. With Compose, you use a YAML file to configure your application's services. Then, with a single command, you create and start all the services from your configuration.
+Docker Compose is a tool for defining and running multi-container Docker applications. It uses a YAML file to configure application services. With a single command, all the services from the configuration can be created and started.
 
-Compose works in all environments; production, staging, development, testing, as well as CI workflows. It also has commands for managing the whole lifecycle of your application:
+Docker Compose works in various environments, including production, staging, development, testing, and CI workflows. It also provides commands for managing the entire lifecycle of applications:
 
 - Start, stop, and rebuild services
 - View the status of running services
@@ -31,11 +31,12 @@ Compose works in all environments; production, staging, development, testing, as
 To install Docker Compose, follow the instructions below based on your operating system:
 
 - **Linux**: 
-  - To install Docker Compose on Linux, please visit [Linux Install](https://docs.docker.com/desktop/install/linux-install/) for detailed installation steps.
+  - For detailed installation steps on Linux, visit [Linux Install](https://docs.docker.com/desktop/install/linux-install/).
 
 - **MacOS**: 
-  - For MacOS, detailed installation instructions for Docker Compose can be found at [Mac Install](https://docs.docker.com/desktop/install/mac-install/).
+  - Detailed installation instructions for Docker Compose on MacOS can be found at [Mac Install](https://docs.docker.com/desktop/install/mac-install/).
 
 - **Windows**: 
   - Detailed installation steps for Docker Compose on Windows can be found at [Windows Install](https://docs.docker.com/desktop/install/windows-install/).
 
+```

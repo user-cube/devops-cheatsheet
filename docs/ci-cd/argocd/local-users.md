@@ -12,21 +12,21 @@ last_modified_date: 2024-01-13
 
 <div markdown="block">
 {: .important }
-If you are using LDAP you should take a look at [LDAP Integration Page](/devops-cheatsheet/docs/cicd/argocd/ldap-integration), use LDAP Groups and Users instead. <br>
-This procedure was replaced with LDAP user integrations, you can see this in more details on confluence: ArgoCD LDAP Integration
+If you are using LDAP, you should consider using the [LDAP Integration Page](/devops-cheatsheet/docs/cicd/argocd/ldap-integration) and utilize LDAP Groups and Users instead. <br>
+This procedure has been replaced with LDAP user integrations. For more details, refer to the ArgoCD LDAP Integration page on confluence.
 </div>
 
 ## Table of Contents
 
 - [ArgoCD Create Local Users](#argocd-create-local-users)
   * [Table of Contents](#table-of-contents)
-  * [Create user on config-map](#create-user-on-config-map)
-  * [Define new password](#define-new-password)
-  * [Set permissions to users](#set-permissions-to-users)
+  * [Create a user in the config-map](#create-user-in-the-config-map)
+  * [Define a new password](#define-a-new-password)
+  * [Set permissions for users](#set-permissions-for-users)
 
-## Create user on config-map
+## Create a user in the config-map
 
-In order to create a new user you need to update the file `argocd-cm.yaml`. Open the file and change according to this example:
+To create a new user, update the file `argocd-cm.yaml`. Open the file and make changes according to this example:
 
 ```yaml
 apiVersion: v1
@@ -37,17 +37,17 @@ data:
   application.instanceLabelKey: argocd.argoproj.io/instance
 ```
 
-## Define new password
+## Define a new password
 
-Execute the following command using argocd cli tool:
+Execute the following command using the argocd CLI tool:
 
 ```bash
 argocd account update-password --account <NEW_USER> --new-password "<NEW_PASSWORD>"
 ```
 
-## Set permissions to users
+## Set permissions for users
 
-In order to set permissions to users you need to update the file argocd-rbac.yaml. Open the file and change according to this example:
+To set permissions for users, update the file argocd-rbac.yaml. Open the file and make changes according to this example:
 
 ```yaml
 apiVersion: v1
@@ -64,12 +64,11 @@ data:
   policy.default: role:readonly
 ```
 
-**Note**: If you want to create a read-only user please only add the line:
+**Note**: If you want to create a read-only user, only add the line:
 
 ```yaml
 g, <USER>, role:<NEW_ROLE>
 ```
 
-You can learn more about permissions in [ArgoCD Official Documentation](https://argo-cd.readthedocs.io/en/stable/operator-manual/rbac/).
-
+You can learn more about permissions in the [ArgoCD Official Documentation](https://argo-cd.readthedocs.io/en/stable/operator-manual/rbac/).
 

@@ -10,16 +10,16 @@ last_modified_date: 2024-01-09
 
 # Kompose
 
-What's Kompose? It's a conversion tool for all things compose (namely Docker Compose) to container orchestrators (Kubernetes or OpenShift).
+What is Kompose? It is a tool for converting Docker Compose files to Kubernetes or OpenShift resources.
 
-More information can be found on the Kompose website at their [official website](http://kompose.io.)
+For more information, visit the [official Kompose website](http://kompose.io).
 
-You need to have a Kubernetes cluster, and the kubectl command-line tool must be configured to communicate with your cluster. It is recommended to run this tutorial on a cluster with at least two nodes that are not acting as control plane hosts. If you do not already have a cluster, you can create one by using minikube or you can use one of these Kubernetes playgrounds:
+Before starting, ensure that you have a Kubernetes cluster set up and the kubectl command-line tool configured to communicate with your cluster. It is recommended to run this tutorial on a cluster with at least two nodes that are not acting as control plane hosts. If you do not have a cluster, you can create one using minikube or use one of these Kubernetes playgrounds:
 
 - [Katacoda](https://www.katacoda.com/courses/kubernetes/playground)
 - [Play with Kubernetes](http://labs.play-with-k8s.com/)
 
-To check the version, enter `kubectl version`.
+To check the version, run `kubectl version`.
 
 ```bash
 # Linux

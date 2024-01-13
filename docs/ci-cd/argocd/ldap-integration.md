@@ -33,7 +33,7 @@ Once LDAP integration is configured, users can log in to ArgoCD using their LDAP
 
 ## Prepare secrets
 
-First we need to create our LDAP secrets in order to configure LDAP. Pick LDAP Bind Password and LDAP Bind DN. You can do that by executing the following command:
+First, we need to create our LDAP secrets to configure LDAP. Pick LDAP Bind Password and LDAP Bind DN. You can do that by executing the following command:
 
 ```bash
 echo "INSERT_BIND_DN_HERE" | base64
@@ -41,23 +41,23 @@ echo "INSERT_BIND_DN_HERE" | base64
 echo "INSERT_BIND_PASSWORD_HERE" | base64
 ```
 
-After that you need to update argo secrets. You can edit the secrets by executing the following command:
+After that, you need to update the ArgoCD secrets. You can edit the secrets by executing the following command:
 
 ```bash
 kubectl edit secrets argocd-secret -n argocd
  
 apiVersion: v1
 data:
-  dex.ldap.bindDN: <BASE_64_BIND_DN>
-  dex.ldap.bindPW: <BASE_64_BIND_PASSWORD>
+  dex.ldap.bindDN: <BASE_64_BIND_DN>
+  dex.ldap.bindPW: <BASE_64_BIND_PASSWORD>
 kind: Secret
 ```
 
-Save the changes and they will persist into the Kubernetes cluster.
+Save the changes, and they will persist in the Kubernetes cluster.
 
 ## Dex configuration
 
-Once you have you secrets created you need to configure Dex. To configure Dex you execute the following command and edit the file content like this:
+Once you have your secrets created, you need to configure Dex. To configure Dex, execute the following command and edit the file content like this:
 
 ```bash
 kubectl edit configmaps argocd-cm -n argocd
@@ -101,29 +101,29 @@ data:
   url: https://<YOUR_ARGOCD_URL>
 ```
 
-Make sure you have `url` on your yaml definition otherwise Argo won't redirect you after a login is done.
-You can save the file and it should be applied to the Kubernetes cluster.
+Make sure you have `url` in your yaml definition; otherwise, Argo won't redirect you after a login is done.
+You can save the file, and it should be applied to the Kubernetes cluster.
 
-**Note**: To reload configurations you don't need to delete the pods, dex will automatically reload LDAP configurations.
+**Note**: To reload configurations, you don't need to delete the pods; dex will automatically reload LDAP configurations.
 
 ## Restart Services
 
-Now that everything is configured you need to restart ArgoCD services, you can do it by executing the following command:
+Now that everything is configured, you need to restart ArgoCD services. You can do it by executing the following command:
 
 ```bash
 kubectl delete po -l app.kubernetes.io/component=server  -n argocd                                                                                                          
 kubectl delete po -l app.kubernetes.io/component=dex-server  -n argocd
 ```
 
-A new button will apear on the interface:
+A new button will appear on the interface:
 
 ![argocd](https://user-cube.github.io/devops-cheatsheet/assets/images/argocd/ldap-button.png)
 
-After you press that button you will be redirected to a login page:
+After you press that button, you will be redirected to a login page:
 
 ![argocd](https://user-cube.github.io/devops-cheatsheet/assets/images/argocd/dex-ldaplogin.png)
 
-This page is using LDAP to perform the action. Since we changed the logging to debug you will be able to see some logs about the operations being done in dex server:
+This page is using LDAP to perform the action. Since we changed the logging to debug, you will be able to see some logs about the operations being done in the dex server:
 
 ```bash
 kubectl logs deployment.apps/argocd-dex-server -f
@@ -140,7 +140,7 @@ time="2022-11-22T09:58:08Z" level=info msg="login successful: connector \"ldap\"
 
 ## Define policies for user groups
 
-The LDAP integration is now working, you need to set permissions according to groups and roles, you can do this by editing the configmap with all security policies.
+The LDAP integration is now working; you need to set permissions according to groups and roles. You can do this by editing the configmap with all security policies.
 
 ```bash
 kubectl edit configmaps argocd-rbac-cm -n argocd

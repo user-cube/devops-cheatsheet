@@ -14,6 +14,8 @@ Portainer is a lightweight management UI which allows you to easily manage your 
 
 Portainer is a great tool for managing your Docker environment through a user-friendly interface. It provides a visual representation of the Docker environment, making it easier to monitor and manage containers, images, and other resources. With Portainer, you can easily create and manage containers, inspect container logs, and monitor resource usage. Additionally, Portainer offers role-based access control, allowing you to define user roles and permissions for managing Docker resources. Whether you are a beginner or an experienced Docker user, Portainer simplifies the management of Docker environments and provides a seamless user experience.
 
+![portainer](https://user-cube.github.io/devops-cheatsheet/assets/images/docker/portainer.gif)
+
 ## Table of contents
 
 - [Portainer Compose File](#portainer-compose-file)

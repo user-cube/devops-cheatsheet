@@ -2,10 +2,13 @@
 title: Home
 layout: home
 nav_order: 1
-last_modified_date: 2024-01-07
+last_modified_date: 2024-01-13
 ---
 
 # DevOps Cheat Sheets
+
+[![CI](https://github.com/user-cube/devops-cheatsheet/actions/workflows/ci.yml/badge.svg)](https://github.com/user-cube/devops-cheatsheet/actions/workflows/ci.yml) [![Deploy Jekyll site to Pages](https://github.com/user-cube/devops-cheatsheet/actions/workflows/pages.yml/badge.svg)](https://github.com/user-cube/devops-cheatsheet/actions/workflows/pages.yml)
+
 
 Welcome to the DevOps Cheatsheets Repository! This repository serves as a comprehensive resource for DevOps enthusiasts, providing a collection of cheatsheets and relevant information to help you navigate and master the DevOps role.
 

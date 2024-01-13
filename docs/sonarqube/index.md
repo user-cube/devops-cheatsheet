@@ -109,7 +109,6 @@ Now that everything is in place you need to update the helm. Look for this conte
    
 # Additional sonar properties to load from a secret with a key "secret.properties" (must be a string)
 # sonarSecretProperties:
-# DEVOPS-DESIGUAL: all the sonar.properties are intregrated with Vault referenced by the external-secret below
 sonarSecretProperties: sonar-properties
 ```
 

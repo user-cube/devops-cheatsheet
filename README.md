@@ -1,5 +1,7 @@
 # Devops Cheat Sheets
 
+[![CI](https://github.com/user-cube/devops-cheatsheet/actions/workflows/ci.yml/badge.svg)](https://github.com/user-cube/devops-cheatsheet/actions/workflows/ci.yml) [![Deploy Jekyll site to Pages](https://github.com/user-cube/devops-cheatsheet/actions/workflows/pages.yml/badge.svg)](https://github.com/user-cube/devops-cheatsheet/actions/workflows/pages.yml)
+
 ## Overview
 Welcome to the DevOps Cheatsheets Repository! This repository serves as a comprehensive resource for DevOps enthusiasts, providing a collection of cheatsheets and relevant information to help you navigate and master the DevOps role.
 

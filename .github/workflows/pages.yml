@@ -60,3 +60,30 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
+      
+      - name: Build Success
+        uses: rjstone/discord-webhook-notify@v1
+        if: success()
+        with:
+          severity: info
+          username: GitHub Actions
+          details: Build Succeeded!
+          text: "Execution URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}\nDeployment URL: https://devops.ruicoelho.pt"
+          webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
+      
+      - name: Build Failure
+        uses: rjstone/discord-webhook-notify@v1
+        if: failure()
+        with:
+            severity: error
+            details: Build Failed! Project not deployed!
+            text: "Execution URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+            webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
+      - name: Build Cancelled
+        uses: rjstone/discord-webhook-notify@v1
+        if: cancelled()
+        with:
+            severity: warn
+            details: Build Cancelled! Project not deployed!
+            text: "Execution URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+            webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}

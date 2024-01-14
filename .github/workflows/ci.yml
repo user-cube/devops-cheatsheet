@@ -20,15 +20,6 @@ jobs:
           cache-version: 0 # Increment this number if you need to re-download cached gems
       - name: Build with Jekyll
         run: bundle exec jekyll build
-      
-      # Send notifications on discord
-      - name: Get Pull Request Text
-        run: |
-          pull_request_text=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" https://api.github.com/repos/${{ github.repository }}/pulls/${{ github.event.pull_request.number }} | jq -r '.body')
-          echo "PULL_REQUEST_TEXT=$pull_request_text" >> $GITHUB_ENV
-        shell: bash
-        env:
-          PULL_REQUEST_TEXT: ${{ steps.get_pull_request_text.outputs.pull_request_text }}
 
       - name: Build Success
         uses: rjstone/discord-webhook-notify@v1
@@ -36,9 +27,8 @@ jobs:
         with:
           severity: info
           username: GitHub Actions
-          description: This is a custom description.
-          details: 'Custom details: Somebody set up us the bomb.'
-          footer: This is a footer.
+          description: Build Succeeded
+          details: 'Custom details: Somebody set up us the bomb. Execution URL: ${{ github.run_url }}'
           text: ${{ env.PULL_REQUEST_TEXT }}
           webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
       

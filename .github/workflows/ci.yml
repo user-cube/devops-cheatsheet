@@ -22,13 +22,24 @@ jobs:
         run: bundle exec jekyll build
       
       # Send notifications on discord
+      - name: Get Pull Request Text
+        run: |
+          pull_request_text=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" https://api.github.com/repos/${{ github.repository }}/pulls/${{ github.event.pull_request.number }} | jq -r '.body')
+          echo "::set-env name=PULL_REQUEST_TEXT::$pull_request_text"
+        shell: bash
+
       - name: Build Success
         uses: rjstone/discord-webhook-notify@v1
         if: success()
         with:
-            severity: info
-            details: Build Succeeded!
-            webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
+          severity: info
+          username: GitHub Actions
+          description: This is a custom description.
+          details: 'Custom details: Somebody set up us the bomb.'
+          footer: This is a footer.
+          text: ${{ env.PULL_REQUEST_TEXT }}
+          webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
+      
       - name: Build Failure
         uses: rjstone/discord-webhook-notify@v1
         if: failure()

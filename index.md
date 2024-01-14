@@ -5,9 +5,10 @@ nav_order: 1
 last_modified_date: 2024-01-13
 ---
 
-# DevOps Cheat Sheets
+# <img src="https://user-cube.github.io/devops-cheatsheet/assets/images/devops-logo.png" alt="logo" width="100"/> DevOps Cheat Sheets
 
 [![CI](https://github.com/user-cube/devops-cheatsheet/actions/workflows/ci.yml/badge.svg)](https://github.com/user-cube/devops-cheatsheet/actions/workflows/ci.yml) [![Deploy Jekyll site to Pages](https://github.com/user-cube/devops-cheatsheet/actions/workflows/pages.yml/badge.svg)](https://github.com/user-cube/devops-cheatsheet/actions/workflows/pages.yml)
+
 
 
 Welcome to the DevOps Cheatsheets Repository! This repository serves as a comprehensive resource for DevOps enthusiasts, providing a collection of cheatsheets and relevant information to help you navigate and master the DevOps role.
@@ -73,6 +74,13 @@ We encourage contributions from the community! If you have additional cheatsheet
   </li>
 {% endfor %}
 </ul>
+
+## Join our Discord
+
+We invite you to join our Discord community to connect with other DevOps enthusiasts, share insights, and seek help from the community. Let's grow together in our DevOps journey!
+
+[Join Discord](https://discord.gg/FZmfkZpJUg)
+
 
 ## Issues
 

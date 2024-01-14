@@ -20,3 +20,26 @@ jobs:
           cache-version: 0 # Increment this number if you need to re-download cached gems
       - name: Build with Jekyll
         run: bundle exec jekyll build
+      
+      # Send notifications on discord
+      - name: Build Success
+        uses: rjstone/discord-webhook-notify@v1
+        if: success()
+        with:
+            severity: info
+            details: Build Succeeded!
+            webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
+      - name: Build Failure
+        uses: rjstone/discord-webhook-notify@v1
+        if: failure()
+        with:
+            severity: error
+            details: Build Failed!
+            webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
+      - name: Build Cancelled
+        uses: rjstone/discord-webhook-notify@v1
+        if: cancelled()
+        with:
+            severity: warn
+            details: Build Cancelled!
+            webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}

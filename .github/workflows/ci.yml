@@ -25,7 +25,7 @@ jobs:
       - name: Get Pull Request Text
         run: |
           pull_request_text=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" https://api.github.com/repos/${{ github.repository }}/pulls/${{ github.event.pull_request.number }} | jq -r '.body')
-          echo "::set-env name=PULL_REQUEST_TEXT::$pull_request_text"
+          echo "PULL_REQUEST_TEXT=$pull_request_text" >> $GITHUB_ENV
         shell: bash
 
       - name: Build Success

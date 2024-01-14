@@ -62,7 +62,7 @@ enable_copy_code_button: true
 back_to_top: true
 back_to_top_text: "Back to top"
 
-logo: "/assets/images/devops-process.png"
+logo: "/assets/images/devops-logo.png"
 
 # Add last edit information to footer
 

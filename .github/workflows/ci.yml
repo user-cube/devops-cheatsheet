@@ -27,9 +27,7 @@ jobs:
         with:
           severity: info
           username: GitHub Actions
-          description: Build Succeeded
-          details: 'Custom details: Somebody set up us the bomb. Execution URL: ${{ github.run_url }}'
-          text: ${{ env.PULL_REQUEST_TEXT }}
+          description: "Custom details: Somebody set up us the bomb. Execution URL: ${{ github.run_url }}"
           webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
       
       - name: Build Failure

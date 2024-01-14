@@ -27,7 +27,8 @@ jobs:
         with:
           severity: info
           username: GitHub Actions
-          text: "Custom details: Somebody set up us the bomb. Execution URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          details: Build Succeeded!
+          text: "Execution URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
           webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
       
       - name: Build Failure
@@ -36,6 +37,7 @@ jobs:
         with:
             severity: error
             details: Build Failed!
+            text: "Execution URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
             webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
       - name: Build Cancelled
         uses: rjstone/discord-webhook-notify@v1
@@ -43,4 +45,5 @@ jobs:
         with:
             severity: warn
             details: Build Cancelled!
+            text: "Execution URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
             webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}

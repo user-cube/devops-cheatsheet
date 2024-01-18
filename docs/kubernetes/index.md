@@ -18,5 +18,4 @@ Moreover, Kubernetes offers support for various cloud platforms, including AWS, 
 
 Kubernetes is also known for its robust security features, providing strong isolation between applications and multi-tenancy support. It offers fine-grained access controls, network policies, and encryption to ensure that your applications and data are protected. Additionally, Kubernetes has a thriving ecosystem of third-party security tools and best practices to further enhance the security of your containerized applications.
 
-
-![Kubernetes Page](https://user-cube.github.io/devops-cheatsheet/assets/images/kubernetes/kubernetes-page.svg)
+![Kubernetes Logo](https://user-cube.github.io/devops-cheatsheet/assets/images/kubernetes/kubernetes_logo.png)

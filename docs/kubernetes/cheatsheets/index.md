@@ -22,4 +22,4 @@ The Kubernetes Cheat Sheets serve as a reference guide providing a high level ov
 
 Each cheat sheet is concise and practical, offering examples and tips for both beginners and experienced users.
 
-![Kubernetes Logo](https://user-cube.github.io/devops-cheatsheet/assets/images/kubernetes/kubernetes_logo.png)
+![Kubernetes Page](https://user-cube.github.io/devops-cheatsheet/assets/images/kubernetes/kubernetes-page.svg)

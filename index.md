@@ -18,8 +18,10 @@ Welcome to the DevOps Cheatsheets Repository! This repository serves as a compre
 ## Table of Contents
 
 1. [Kubernetes](/docs/kubernetes)
-   - [Kubernetes Basics](/docs/kubernetes/cheatsheets)
-      - [Pods](/docs/kubernetes/cheatsheets)
+   - [Kubernetes Cheat Sheets](/docs/kubernetes/cheatsheets)
+      - [Pods](/docs/kubernetes/cheatsheets/pods)
+      - [Services](/docs/kubernetes/cheatsheets/services)
+      - [Deployments](/docs/kubernetes/cheatsheets/deployments)
    - [K3S](/docs/kubernetes/k3s)
    - [Kubernetes DNS](/docs/kubernetes/dns/)
       - [DNS Debugging](/docs/kubernetes/dns/debug)

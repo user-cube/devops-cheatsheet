@@ -5,12 +5,10 @@ nav_order: 1
 parent: Kubernetes
 has_children: true
 permalink: docs/kubernetes/cheatsheets
-last_modified_date: 2024-01-07
+last_modified_date: 2024-01-18
 ---
 
 # Kubernetes Cheat Sheets
-
-![Kubernetes Logo](https://user-cube.github.io/devops-cheatsheet/assets/images/kubernetes/kubernetes_logo.png)
 
 Kubernetes is an open-source platform for managing containerized workloads and services. It provides a framework to run distributed systems resiliently, scaling and managing the lifecycle of containerized applications.
 
@@ -23,3 +21,5 @@ The Kubernetes Cheat Sheets serve as a reference guide providing a high level ov
 - **Security**: Kubernetes security concepts like RBAC, Service Accounts, and Security Contexts.
 
 Each cheat sheet is concise and practical, offering examples and tips for both beginners and experienced users.
+
+![Kubernetes Logo](https://user-cube.github.io/devops-cheatsheet/assets/images/kubernetes/kubernetes_logo.png)

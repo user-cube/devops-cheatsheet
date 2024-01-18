@@ -21,6 +21,8 @@ Welcome to the DevOps Cheatsheets Repository! This repository serves as a compre
    - [Kubernetes Basics](/docs/kubernetes/cheatsheets)
       - [Pods](/docs/kubernetes/cheatsheets)
    - [K3S](/docs/kubernetes/k3s)
+   - [Kubernetes DNS](/docs/kubernetes/dns/)
+      - [DNS Debugging](/docs/kubernetes/dns/debug)
 2. [Git](/docs/git)
    - [Git Hooks](/docs/git/hooks)
       - [Commit Message Hook](/docs/git/hooks/commit-msg)

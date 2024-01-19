@@ -4,10 +4,11 @@ layout: home
 grand_parent: Kubernetes
 parent: Kubernetes Cheat Sheets
 nav_order: 1
-last_modified_date: 2024-01-07
+last_modified_date: 2024-01-19
+permalink: docs/kubernetes/cheatsheets/pods
 ---
 
-# Kubernetes Pods
+# Pods in Kubernetes
 
 A Pod is a Kubernetes abstraction that represents a group of one or more application containers (such as Docker), and some shared resources for those containers. Those resources include:
 
@@ -25,7 +26,27 @@ Pods are the atomic unit on the Kubernetes platform. When we create a Deployment
 
 - [Kubernetes Pods](#kubernetes-pods)
   * [Table of Contents](#table-of-contents)
+  * [Why Use a Pod?](#why-use-a-pod)
+  * [Creating Pods](#creating-pods)
+  * [Using Pods](#using-pods)
+  * [Pod Limitations](#pod-limitations)
   * [Cheat Sheet](#cheat-sheet)
+  
+## Why Use a Pod?
+
+Pods allow you to manage, deploy and scale applications easily. They can be easily managed by Deployment, DaemonSet, Job, and other higher-level constructs.
+
+## Creating Pods
+
+You can create Pods using the `kubectl run` command, `kubectl apply -f` with a Pod YAML, or via the Kubernetes API.
+
+## Using Pods
+
+Pods can be used to host applications, temporary workloads, replicated applications, and more.
+
+## Pod Limitations
+
+Pods are ephemeral and do not have the capability to heal themselves in case of failures. They are designed to be disposable and replaceable.
 
 ## Cheat Sheet
 

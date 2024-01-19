@@ -4,7 +4,8 @@ layout: home
 grand_parent: Kubernetes
 parent: Kubernetes Cheat Sheets
 nav_order: 2
-last_modified_date: 2024-01-18
+last_modified_date: 2024-01-19
+permalink: docs/kubernetes/cheatsheets/services
 ---
 
 # Services in Kubernetes

@@ -4,7 +4,7 @@ layout: home
 nav_order: 1
 parent: Docker
 permalink: docs/docker/run-with-ssl
-last_modified_date: 2024-01-13
+last_modified_date: 2024-01-22
 ---
 
 # Run containers with SSL on development environmets
@@ -150,7 +150,7 @@ services:
   proxy:
     image: nginx:latest
     ports:
-      - 9200:9200
+      - 443:443
     volumes:
       - ./proxy/conf/nginx.conf:/etc/nginx/nginx.conf
       - ./proxy/certs:/etc/nginx/certs 

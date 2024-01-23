@@ -44,6 +44,8 @@ Welcome to the DevOps Cheatsheets Repository! This repository serves as a compre
       - [ArgoCD Add New Repositories](/docs/cicd/argocd/new-repositories)
       - [ArgoCD LDAP Integration](/docs/cicd/argocd/ldap-integration)
       - [ArgoCD HelmChart](/docs/cicd/arocd/helmchart)
+   - [Heroku](/docs/cicd/heroku/)
+      - [Sending Webhook Messages from Heroku to Discord](/docs/cicd/heroku/static-pages)
 4. [Crontabs](/docs/crontab)
    - [Crontab Cheat Sheet](/docs/crontab/cheatsheets)
 5. [Docker](/docs/docker)

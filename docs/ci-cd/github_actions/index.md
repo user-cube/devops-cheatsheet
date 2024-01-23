@@ -1,7 +1,7 @@
 ---
 title: GitHub Actions
 layout: home
-nav_order: 1
+nav_order: 2
 parent: CI/CD
 has_children: true
 permalink: docs/cicd/actions/

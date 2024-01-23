@@ -1,7 +1,7 @@
 ---
 title: ArgoCD
 layout: home
-nav_order: 2
+nav_order: 1
 parent: CI/CD
 has_children: true
 permalink: docs/cicd/argocd

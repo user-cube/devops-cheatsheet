@@ -17,6 +17,8 @@ Welcome to the DevOps Cheatsheets Repository! This repository serves as a compre
 
 ## Table of Contents
 
+## Table of Contents
+
 1. [Kubernetes](/docs/kubernetes)
    - [Kubernetes Cheat Sheets](/docs/kubernetes/cheatsheets)
       - [Pods](/docs/kubernetes/cheatsheets/pods)
@@ -44,13 +46,13 @@ Welcome to the DevOps Cheatsheets Repository! This repository serves as a compre
       - [ArgoCD Create Local Users](/docs/cicd/argocd/local-users)
       - [ArgoCD Add New Repositories](/docs/cicd/argocd/new-repositories)
       - [ArgoCD LDAP Integration](/docs/cicd/argocd/ldap-integration)
-      - [ArgoCD HelmChart](/docs/cicd/arocd/helmchart)
+      - [ArgoCD HelmChart](/docs/cicd/argocd/helmchart)
    - [Heroku](/docs/cicd/heroku/)
       - [Sending Webhook Messages from Heroku to Discord](/docs/cicd/heroku/static-pages)
 4. [Crontabs](/docs/crontab)
    - [Crontab Cheat Sheet](/docs/crontab/cheatsheets)
 5. [Docker](/docs/docker)
-   - [Run containers with SSL on development environmets](/docs/docker/run-with-ssl)
+   - [Run containers with SSL on development environments](/docs/docker/run-with-ssl)
    - [Docker Compose](/docs/docker/compose)
       - [Portainer Compose File](/docs/docker/compose/portainer)
       - [Redis Compose File](/docs/docker/compose/databases/redis)
@@ -64,13 +66,14 @@ Welcome to the DevOps Cheatsheets Repository! This repository serves as a compre
       - [Custom DNS](/docs/github/pages/custom-dns)
 8. [Ansible](/docs/ansible/)
    - [Ansible Playbooks](/docs/ansible/playbooks)
-      - [Test Playbooks On Docker](/docs/ansible/playbooks/test-on-docker) 
-9. [Tools & Tips](/docs/tols-and-tips)
-   - [Tools](/docs/tols-and-tips/tools)
-      - [K9S](/docs/tols-and-tips/tools/k9s)
-      - [Kompose](/docs/tols-and-tips/tools/kompose)
-      - [kubectl](/docs/tols-and-tips/tools/kubectl)
-      - [Helmchart](/docs/tols-and-tips/tools/helmchart)
+      - [Test Playbooks On Docker](/docs/ansible/playbooks/test-on-docker)
+      - [Install K3S and tools](/docs/ansible/playbooks/install-k3s-and-tools)
+9. [Tools & Tips](/docs/tools-and-tips)
+   - [Tools](/docs/tools-and-tips/tools)
+      - [K9S](/docs/tools-and-tips/tools/k9s)
+      - [Kompose](/docs/tools-and-tips/tools/kompose)
+      - [kubectl](/docs/tools-and-tips/tools/kubectl)
+      - [Helmchart](/docs/tools-and-tips/tools/helmchart)
 
 ## How to Use
 

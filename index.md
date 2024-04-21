@@ -28,6 +28,7 @@ Welcome to the DevOps Cheatsheets Repository! This repository serves as a compre
       - [Storage](/docs/kubernetes/cheatsheets/storage)
       - [Security](/docs/kubernetes/cheatsheets/security)
    - [K3S](/docs/kubernetes/k3s)
+      - [Ingress Nginx on K3S](/docs/kubernetes/k3s/ingress-nginx)
    - [Kubernetes DNS](/docs/kubernetes/dns/)
       - [DNS Debugging](/docs/kubernetes/dns/debug)
 2. [Git](/docs/git)

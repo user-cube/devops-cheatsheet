@@ -4,7 +4,7 @@ layout: home
 nav_order: 5
 has_children: true
 permalink: docs/docker
-last_modified_date: 2024-01-08
+last_modified_date: 2024-04-25
 ---
 
 # Docker
@@ -58,7 +58,6 @@ A Dockerfile is a script that contains instructions for building a Docker image.
 - Example Dockerfile:
 
 ```Dockerfile
-Copy code
 FROM ubuntu:latest
 RUN apt-get update && apt-get install -y my_package
 CMD ["my_command"]

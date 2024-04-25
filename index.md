@@ -2,7 +2,7 @@
 title: Home
 layout: home
 nav_order: 1
-last_modified_date: 2024-01-13
+last_modified_date: 2024-04-25
 ---
 
 # <img src="https://user-cube.github.io/devops-cheatsheet/assets/images/devops-logo.png" alt="logo" width="100"/> DevOps Cheat Sheets

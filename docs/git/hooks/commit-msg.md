@@ -5,7 +5,7 @@ nav_order: 1
 grand_parent: Git
 parent: Git Hooks
 permalink: docs/git/hooks/commit-msg
-last_modified_date: 2024-01-13
+last_modified_date: 2024-04-30
 ---
 
 # Commit Message
@@ -32,23 +32,33 @@ chmod +x .git/hooks/commit-msg
 ```bash
 #!/bin/bash
 
-# Get the branch name
+# Get the name of the current branch
 BRANCH_NAME=$(git symbolic-ref --short HEAD)
 
-# List of disallowed branches
-DISALLOWED_BRANCHES=("main" "master" "develop")
+# Check if the current commit is a merge commit
+if git rev-parse --verify -q HEAD >/dev/null && git rev-parse --verify -q HEAD^2 >/dev/null; then
+    # It's a merge commit
+    echo "Merge commit detected, skipping branch verifications."
+else
+    # It's not a merge commit, so check if the branch is allowed or not
+    # List of disallowed branches
+    DISALLOWED_BRANCHES=("main" "master" "develop")
 
-# Check if the obtained branch is in the disallowed branches list
-if [[ " ${DISALLOWED_BRANCHES[@]} " =~ " ${BRANCH_NAME} " ]]; then
-    echo "Branch not allowed. The main, master, and develop branches are not allowed."
-    exit 1
+    # Check if the branch is in the list of disallowed branches
+    if [[ " ${DISALLOWED_BRANCHES[@]} " =~ " ${BRANCH_NAME} " ]]; then
+        echo "Branch not allowed. The disallowed branches are: ${DISALLOWED_BRANCHES[@]}"
+        exit 1
+    fi
+
+    # Add the branch name to the beginning of the commit message
+    sed -i.bak -e "1s/^/$BRANCH_NAME: /" "$1"
+
+    # Remove the backup file created by sed
+    rm "$1.bak"
 fi
 
-# Add the branch name to the commit message
-sed -i.bak -e "1s/^/$BRANCH_NAME: /" "$1"
-
-# Remove the backup file created by sed
-rm "$1.bak"
+# Allow push after processing the commit (whether modifying the message or allowing a merge)
+exit 0
 ```
 
 This script retrieves the current branch name and appends it to the first line of the commit message. Modify the script as per your requirements.
